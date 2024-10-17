@@ -12,6 +12,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="accounts" target="21" />
+      <module name="cards" target="21" />
+      <module name="com.eazybytes.accounts" target="21" />
       <module name="loans" target="21" />
     </bytecodeTargetLevel>
   </component>

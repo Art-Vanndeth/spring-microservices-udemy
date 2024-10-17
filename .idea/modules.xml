@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.eazybytes.accounts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.eazybytes.accounts.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.eazybytes.cards.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.eazybytes.cards.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.eazybytes.loans.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.eazybytes.loans.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-microservices-udemy.iml" filepath="$PROJECT_DIR$/.idea/spring-microservices-udemy.iml" />
     </modules>
   </component>
