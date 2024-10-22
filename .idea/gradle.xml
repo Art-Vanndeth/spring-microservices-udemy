@@ -60,14 +60,56 @@
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/section6/accounts" />
         <option name="gradleJvm" value="openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/section6/accounts" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/section6/cards" />
         <option name="gradleJvm" value="openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/section6/cards" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/section6/loans" />
         <option name="gradleJvm" value="openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/section6/loans" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/section6/v1-springboot/accounts" />
+        <option name="gradleJvm" value="openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/section6/v1-springboot/accounts" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/section6/v1-springboot/cards" />
+        <option name="gradleJvm" value="openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/section6/v1-springboot/cards" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/section6/v1-springboot/loans" />
+        <option name="gradleJvm" value="openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/section6/v1-springboot/loans" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
