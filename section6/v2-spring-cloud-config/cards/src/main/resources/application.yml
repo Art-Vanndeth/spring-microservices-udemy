@@ -19,7 +19,6 @@ spring:
   config:
     import: "optional:configserver:http://localhost:8071/"
 
-
   rabbitmq:
     host: "localhost"
     port: 5672
