@@ -1,8 +1,8 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.3.4'
+	id 'org.springframework.boot' version '3.3.4'  // Latest compatible Spring Boot version
 	id 'io.spring.dependency-management' version '1.1.6'
-	id 'com.google.cloud.tools.jib' version '3.4.2'
+	id 'com.google.cloud.tools.jib' version '3.4.2'  // Latest Jib version
 }
 
 ext {
@@ -12,7 +12,7 @@ ext {
 group = 'com.eazybytes'
 version = '0.0.1-SNAPSHOT'
 description = 'Microservice for Cards'
-sourceCompatibility = '21'
+sourceCompatibility = JavaVersion.VERSION_21
 
 java {
 	toolchain {
@@ -25,19 +25,30 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+	// Spring dependencies
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+
+	// Lombok
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Dev tools
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Database
+	runtimeOnly 'com.h2database:h2'
+
+	// OpenAPI Documentation
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+	// Testing dependencies
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.platform:junit-platform-launcher'  // Move test dependencies to implementation
 }
 
 tasks.named('test') {
@@ -45,10 +56,21 @@ tasks.named('test') {
 }
 
 jib {
+	from {
+		image = 'openjdk:21-jdk'
+	}
 	to {
-		image = 'eazybytes/cards:s6'
+		image = 'vanndeth2001/cards:s6'
+	}
+	dockerClient {
+		executable = '/usr/local/bin/docker'  // Path to your Docker executable, adjust if needed
+	}
+	container {
+		ports = ['9000']
+		jvmFlags = ['-Xms512m', '-Xmx1024m']
 	}
 }
+
 
 dependencyManagement {
 	imports {
