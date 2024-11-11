@@ -60,7 +60,7 @@ jib {
 		image = 'openjdk:21-jdk'
 	}
 	to {
-		image = 'vanndeth2001/loans:s8'
+		image = 'vanndeth2001/loans:s9'
 	}
 	dockerClient {
 		executable = '/usr/local/bin/docker'  // Path to your Docker executable, adjust if needed

@@ -10,5 +10,10 @@
         <module name="cards.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="configserver" target="21" />
+      <module name="configserver.main" target="21" />
+      <module name="configserver.test" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
